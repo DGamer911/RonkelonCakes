@@ -78,7 +78,7 @@ function Hero() {
         initial={{ x: 700 }}
         animate={{ x: 0 }}
         transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-        className="lg:rounded-l-full rounded-b-full order-1 lg:order-2 flex justify-center lg:translate-x-[100px] translate-x-0 drop-shadow-2xl lg:w-[600px] w-[220px] bg-white"
+        className="lg:rounded-l-full lg:rounded-br-none rounded-b-full order-1 lg:order-2 flex justify-center lg:translate-x-[100px] translate-x-0 drop-shadow-2xl lg:w-[600px] w-[220px] bg-white"
       >
         <img src={image} className="" alt="" />
       </motion.div>
