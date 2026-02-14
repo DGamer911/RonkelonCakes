@@ -48,6 +48,9 @@ a {
   text-decoration: inherit;
 }
 
+a.active{
+  color: var(--color-orange);
+}
 
 body {
   margin: 0;

@@ -129,7 +129,7 @@ function NavBar() {
             animate={{ y: 0 }}
             exit={{ y: -800 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="w-screen flex flex-col backdrop-blur-md h-screen bg-black/50 absolute top-0 left-0   z-40"
+            className="w-screen lg:hidden flex flex-col backdrop-blur-md h-screen bg-black/50 absolute top-0 left-0   z-40"
           >
             <ul className="flex flex-col px-10 py-20 gap-5">
               <motion.li
