@@ -6,11 +6,13 @@ import Section2 from "../components/Section2";
 
 function Home() {
   return (
+<>
+<NavBar/>
     <div className="w-full overflow-x-hidden m-0">
-      <NavBar />
       <Hero />
       <Section2/>
     </div>
+</>
   );
 }
 

@@ -27,8 +27,8 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
-      <nav className="max-w-screen bg-white drop-shadow-lg z-50 h-[60px] flex items-center justify-between px-2 lg:px-5 sticky top-0 z-50">
+    <div className=" sticky top-0 z-50 ">
+      <nav className="max-w-screen bg-white drop-shadow-lg z-50 h-[60px] flex items-center justify-between px-2 relative lg:px-5 z-50">
         <h3 className="text-[var(--color-orange)] font-bold text-xl">LOGO</h3>
         <ul className="lg:flex hidden justify-center text-base gap-5 font-medium">
           <motion.li
@@ -129,7 +129,7 @@ function NavBar() {
             animate={{ y: 0 }}
             exit={{ y: -800 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="w-screen lg:hidden flex flex-col backdrop-blur-md h-screen bg-black/50 absolute top-0 left-0   z-40"
+            className="w-full overflow-x-hidden lg:hidden flex flex-col backdrop-blur-md h-screen bg-black/50 absolute top-0 z-40"
           >
             <ul className="flex flex-col px-10 py-20 gap-5">
               <motion.li
