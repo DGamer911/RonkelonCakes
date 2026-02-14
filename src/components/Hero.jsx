@@ -2,9 +2,13 @@ import React from "react";
 import image from "../assets/imd.png";
 import "../index.css";
 import { motion } from "motion/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faTelegram, faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
 function Hero() {
+  const iconStyles = ""
+
     function changeColor() {
         let num1 = Math.floor(Math.random() * 256);
         let num2 = Math.floor(Math.random() * 256);
@@ -13,8 +17,8 @@ function Hero() {
         return color;
     }
   return (
-    <div className="w-screen overflow-hidden flex lg:flex-row flex-col-reverse items-center justify-between lg:h-[calc(100vh-60px)] lg:px-20 bg-[var(--color-cream)]">
-      <div className="details my-20">
+    <div className="w-screen overflow-hidden relative flex lg:flex-row flex-col-reverse items-center justify-between h-[calc(100vh-60px)] lg:px-20 bg-[var(--color-cream)]">
+      <div className="details mb-30"> 
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -43,7 +47,7 @@ function Hero() {
           <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color : changeColor()}} transition={{duration : 0.3 ,type:"spring" ,stiffness :240}} >e</motion.span>
           <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color : changeColor()}} transition={{duration : 0.3 ,type:"spring" ,stiffness :240}} >l</motion.span>
           <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>o</motion.span>
-          <motion.span className="inline-block" drag onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>n</motion.span>
+          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>n</motion.span>
         </motion.h1>
         <motion.p
           initial={{ y: 50, opacity: 0 }}
@@ -73,6 +77,7 @@ function Hero() {
             Contact Us
           </motion.button>
         </motion.div>
+
       </div>
       <motion.div
         initial={{ x: 700 }}

@@ -43,6 +43,17 @@ html {
 }
 
 
+.aps{
+  background: url(./assets/cmd2.jpg), rgba(255, 127, 127,.7);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(50px);
+  background-blend-mode: darken ;
+  background-clip: border-box;
+}
+
 a {
   font-weight: normal;
   text-decoration: inherit;
