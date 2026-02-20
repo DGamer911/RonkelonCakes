@@ -5,7 +5,7 @@ import '../index.css'
 function Section3() {
   return (
     <div className="bg-[#fafafa)] relative p-5 flex-col flex justify-center items-center">
-      <div className="my-20 flex z-2 justify-center items-center flex-col">
+      <div className="mt-40 flex z-2 justify-center items-center flex-col">
         <div className="p-4 my-2 text-center text-white rounded-full bg-[var(--color-dark-gray)]/90">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ function Section3() {
         BAKEHOUSE BY<br></br> RONKELON
       </div>
       <div>
-        <div className="flex my-20  flex-col justify-center items-center">
+        <div className="flex my-40  flex-col justify-center items-center">
           <h2 className="bg-[var(--color-dark-gray)]/90 text-white shadow-2xl text-nowrap flex gap-2 lg:mt-0 mt-5  p-4 rounded-full max-w-[200px] text-center">
             Testimonials
             <svg
