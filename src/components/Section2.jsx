@@ -5,6 +5,7 @@ import products from "../data/Products";
 import ice from "../assets/trans.png";
 import choco from "../assets/choco.jpg";
 import pancake from "../assets/pancake.jpg";
+import '../index.css'
 
 function Section2() {
   return (
