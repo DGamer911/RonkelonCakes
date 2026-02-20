@@ -18,9 +18,9 @@ function Card({ name, description, ratings, price, image }) {
         <h2 className="text-2xl font-medium">{name}</h2>
         <h2>{price}</h2>
         <p className="text-base font-light text-white/80">{description}</p>
-        <button className="p-2 mt-2 rounded-full bg-white text-black">
+        <motion.button whileHover={{background:"var(--color-yellow)"}} transition={{duration:.3, ease:"easeIn"}} className="p-2 mt-2 rounded-full bg-white text-black">
           View More
-        </button>
+        </motion.button>
       </div>
     </div>
   );
