@@ -14,6 +14,7 @@
 
   /* Light base */
   --color-cream: #FFE7D0;
+  --color-white: #fafafa;
 
   /* Primary accent */
   --color-orange: #FC6E20;
@@ -22,6 +23,7 @@
   --color-teal: #1ABC9C;
   --color-coral: #FF7F7F;
   --color-yellow: #FFF176;
+
 }
 
 html {

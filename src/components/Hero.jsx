@@ -23,7 +23,7 @@ function Hero() {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 , type: "spring", stiffness: 240 }}
-          className="lg:text-6xl order-2 lg:order-1 text-3xl  lg:max-w-[500px] max-w-[250px] text-shadow-lg cursor-pointer text-[var(--color-orange)]"
+          className="lg:text-6xl order-2 lg:order-1 text-3xl lg:mt-30 lg:max-w-[500px] max-w-[250px] text-shadow-lg cursor-pointer text-[var(--color-orange)]"
           style={{ fontFamily: "MyCustomFont" }}
           
         >

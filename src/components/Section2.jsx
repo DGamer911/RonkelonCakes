@@ -12,7 +12,7 @@ function Section2() {
     <div className="bg-[var(--color-coral)] lg:p-20 p-5 aps">
       <div className="flex flex-col items-center gap-15">
         <h2 className="bg-white shadow-2xl lg:mt-0 mt-5 text-nowrap p-4 rounded-full max-w-[200px] text-center">
-          Featured Products!
+          Highlights!
         </h2>
         <div className="flex gap-4 lg:flex-nowrap flex-wrap justify-center shadow-2xl bg-gray-300 p-10 rounded-4xl">
           {products.map((item) => (

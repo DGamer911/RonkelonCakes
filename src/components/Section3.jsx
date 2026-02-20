@@ -1,8 +1,12 @@
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
-import '../index.css'
+import "../index.css";
+import Card2 from "./Card2";
 
 function Section3() {
+
+
+  
   return (
     <div className="bg-[#fafafa)] relative p-5 flex-col flex justify-center items-center">
       <div className="mt-40 flex z-2 justify-center items-center flex-col">
@@ -70,8 +74,20 @@ function Section3() {
       >
         BAKEHOUSE BY<br></br> RONKELON
       </div>
+      <div className="lg:mt-40 mt-20 flex justify-center">
+        <div className="flex flex-col w-full items-center">
+          <h2 className="bg-[var(--color-dark-gray)]/90 text-white shadow-2xl text-center text-nowrap flex gap-2 lg:mt-0 mt-5  p-4 rounded-full max-w-[200px] text-center">
+            Featured Products!
+          </h2>
+          <div className="flex gap-4 lg:flex-nowrap flex-wrap justify-center p-5 ">
+            <Card2 whileInView={{ once: true, rotate: -22, x: 100 }} initial={{ x: 330 }} />
+            <Card2 whileInView={{ once: true, rotate: 0 }} initial={{ x: 0 }} />
+            <Card2 whileInView={{ once: true, rotate: 22 ,x:-100 }} initial={{ x: -330 }} />
+          </div>
+        </div>
+      </div>
       <div>
-        <div className="flex my-40  flex-col justify-center items-center">
+        <div className="flex lg:my-40  flex-col justify-center items-center">
           <h2 className="bg-[var(--color-dark-gray)]/90 text-white shadow-2xl text-nowrap flex gap-2 lg:mt-0 mt-5  p-4 rounded-full max-w-[200px] text-center">
             Testimonials
             <svg
@@ -89,7 +105,7 @@ function Section3() {
               />
             </svg>
           </h2>
-          <div className="flex gap-4 overflow-x-scroll border-t border-b border-[var(--color-dark-gray)]/20 flex-nowrap z-2  justify-center p-10 my-10">
+          <div className="flex gap-4 overflow-x-scrol lg:overflow-hidden border-t border-b border-[var(--color-dark-gray)]/20 flex-nowrap z-2  justify-center p-10 my-10">
             <TestimonialCard />
             <TestimonialCard />
             <TestimonialCard />
@@ -97,7 +113,7 @@ function Section3() {
         </div>
       </div>
     </div>
-  );
-}
+  );}
+
 
 export default Section3;
