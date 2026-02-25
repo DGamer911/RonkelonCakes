@@ -19,7 +19,7 @@ function Card2({ whileInView, initial }) {
         />
         <h2
           style={{ fontFamily: "MyCustomFont" }}
-          className="text-center p-4 font-light text-xl"
+          className="text-center p-4 font-light text-gray-700 text-xl"
         >
           Chocolate Cake
         </h2>

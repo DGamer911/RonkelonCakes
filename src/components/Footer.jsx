@@ -5,6 +5,8 @@ import {
   faFacebookF,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -44,12 +46,12 @@ export default function Footer() {
           <motion.ul variants={stagger} className="space-y-2 text-sm">
             {["About", "Catalogue", "Blogs", "Contact"].map((item) => (
               <motion.li key={item} variants={fadeUp}>
-                <a
-                  href={`/${item.toLowerCase()}`}
+                <Link
+                  to={`/${item.toLowerCase()}`}
                   className="hover:text-white transition"
                 >
                   {item}
-                </a>
+                </Link>
               </motion.li>
             ))}
           </motion.ul>
