@@ -6,10 +6,12 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import "./index.css";
 import Blogs from "./pages/Blogs";
 import About from "./pages/About";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <Router>
+      <NavBar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalogue" element={<Catalogue />} />

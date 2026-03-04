@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 function Home() {
   return (
 <>
-<NavBar/>
+
     <div className="w-full overflow-x-hidden m-0">
       <Hero />
       <Section2/>

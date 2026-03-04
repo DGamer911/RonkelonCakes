@@ -1,58 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  font-family: 'outfit', Avenir, "inter", "poppins", sans-serif;
+  font-family: "outfit", Avenir, "inter", "poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    /* Base darks */
-  --color-dark-black: #1B1B1B;
+  /* Base darks */
+  --color-dark-black: #1b1b1b;
   --color-dark-gray: #323232;
 
   /* Light base */
-  --color-cream: #FFE7D0;
+  --color-cream: #ffe7d0;
   --color-white: #fafafa;
 
   /* Primary accent */
-  --color-orange: #FC6E20;
+  --color-orange: #fc6e20;
 
   /* Additional accents */
-  --color-teal: #1ABC9C;
-  --color-coral: #FF7F7F;
-  --color-yellow: #FFF176;
-
+  --color-teal: #1abc9c;
+  --color-coral: #ff7f7f;
+  --color-yellow: #fff176;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-
 /* In index.css or App.css */
 @font-face {
-  font-family: 'MyCustomFont'; /* The name you will use in your React components */
-  src:  
-       url('/fonts/bierika.otf') format('opentype'),
-       url('/fonts/bierika.ttf') format('truetype'),
-       url('/fonts/bierika250208-0354.ttf') format('truetype');
+  font-family: "MyCustomFont"; /* The name you will use in your React components */
+  src:
+    url("/fonts/bierika.otf") format("opentype"),
+    url("/fonts/bierika.ttf") format("truetype"),
+    url("/fonts/bierika250208-0354.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   /* Optional: add font-display to control font loading behavior */
-  font-display: swap; 
+  font-display: swap;
 }
 
+.card {
+  width: 300px;
+  height: 400px;
+  background:
+    url(https://i.pinimg.com/1200x/53/14/21/531421539aacf5ebb23963b7974cce92.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+}
 
-.aps{
-  background: url(./assets/cmd2.jpg), rgba(255, 127, 127,.7);
+.nip{
+  background: url(https://i.pinimg.com/1200x/be/d6/8b/bed68bb9e89929697da486fb2756acf4.jpg), rgba(0,0,0,0.7);
+  height: 400px;
+  width: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  background-blend-mode: darken;
+}
+
+.aps {
+  background: url(./assets/cmd2.jpg), rgba(255, 127, 127, 0.7);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   backdrop-filter: blur(50px);
-  background-blend-mode: darken ;
+  background-blend-mode: darken;
   background-clip: border-box;
 }
 
@@ -61,7 +80,7 @@ a {
   text-decoration: inherit;
 }
 
-a.active{
+a.active {
   color: var(--color-orange);
 }
 
@@ -70,5 +89,3 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
-
