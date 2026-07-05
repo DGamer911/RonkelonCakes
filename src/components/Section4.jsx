@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import "../index.css";
+import { div } from "motion/react-client";
 
 const faqs = [
   {
@@ -29,6 +30,7 @@ function Section4() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
+  <div className="w-full p-5 flex flex-col relative items-center bg-[var(--color-surface)] overflow-x-hidden m-0">
     <section className="mx-auto mt-8 w-full max-w-7xl mb-8 rounded-[2rem] border border-[var(--color-ash)]/70 bg-[var(--color-cream)] p-6 shadow-[0_20px_50px_rgba(0,0,0,0.04)] sm:p-8 lg:p-10">
       <div className="max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-orange)]">
@@ -85,7 +87,7 @@ function Section4() {
           );
         })}
       </div>
-    </section>
+    </section></div>
   );
 }
 
