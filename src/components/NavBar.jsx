@@ -27,7 +27,7 @@ const hover2 = {
 const iconStyles = `px-2 py-3 block bg-white rounded-xl`;
 function NavBar() {
   const Navlinks = " p-4 justify-center text-center";
-  const Navlinks2 = "p-4 bg-white rounded-xl text-center";
+  const Navlinks2 = "overflow-hidden bg-white rounded-xl text-center";
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -55,9 +55,10 @@ function NavBar() {
             whileHover={hover.whileHover}
             transition={hover.transition}
             className={Navlinks}
-
           >
-            <Link onClick={() => setIsOpen(false)} to="/">Home</Link>
+            <Link onClick={() => setIsOpen(false)} to="/">
+              Home
+            </Link>
           </motion.li>
           <motion.li
             initial={hover.initial}
@@ -149,50 +150,88 @@ function NavBar() {
             animate={{ y: 0 }}
             exit={{ y: -800 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
+            onClick={() => setIsOpen(false)}
             className="w-full overflow-x-hidden lg:hidden flex flex-col backdrop-blur-md h-screen bg-black/50 absolute top-0 z-40"
           >
-            <ul className="flex flex-col px-10 py-20 gap-5">
-              <motion.li
-                initial={hover2.initial}
-                whileHover={hover2.whileHover}
-                transition={hover2.transition}
-                className={Navlinks2}
-              >
-                <Link to="/">Home</Link>
-              </motion.li>
-              <motion.li
-                initial={hover2.initial}
-                whileHover={hover2.whileHover}
-                transition={hover2.transition}
-                className={Navlinks2}
-              >
-                <Link to="/catalogue">Catalogue</Link>
-              </motion.li>
-              <motion.li
-                initial={hover2.initial}
-                whileHover={hover2.whileHover}
-                transition={hover2.transition}
-                className={Navlinks2}
-              >
-                <Link to="/contact">Contact</Link>
-              </motion.li>
-              <motion.li
-                initial={hover2.initial}
-                whileHover={hover2.whileHover}
-                transition={hover2.transition}
-                className={Navlinks2}
-              >
-                <Link to="/blogs">Blogs</Link>
-              </motion.li>
-              <motion.li
-                initial={hover2.initial}
-                whileHover={hover2.whileHover}
-                transition={hover.transition}
-                className={Navlinks2}
-              >
-                <Link to="/about">About</Link>
-              </motion.li>
-            </ul>
+            <div className="w-full" onClick={(e) => e.stopPropagation()}>
+              <ul className="flex flex-col px-10 py-20 gap-5">
+                <motion.li
+                  initial={hover2.initial}
+                  whileHover={hover2.whileHover}
+                  transition={hover2.transition}
+                  className={Navlinks2}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    to="/"
+                    className="block w-full rounded-xl px-4 py-4"
+                  >
+                    Home
+                  </Link>
+                </motion.li>
+                <motion.li
+                  initial={hover2.initial}
+                  whileHover={hover2.whileHover}
+                  transition={hover2.transition}
+                  className={Navlinks2}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    to="/catalogue"
+                    className="block w-full rounded-xl px-4 py-4"
+                  >
+                    Catalogue
+                  </Link>
+                </motion.li>
+                <motion.li
+                  initial={hover2.initial}
+                  whileHover={hover2.whileHover}
+                  transition={hover2.transition}
+                  className={Navlinks2}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    to="/contact"
+                    className="block w-full rounded-xl px-4 py-4"
+                  >
+                    Contact
+                  </Link>
+                </motion.li>
+                <motion.li
+                  initial={hover2.initial}
+                  whileHover={hover2.whileHover}
+                  transition={hover2.transition}
+                  className={Navlinks2}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    to="/blogs"
+                    className="block w-full rounded-xl px-4 py-4"
+                  >
+                    Blogs
+                  </Link>
+                </motion.li>
+                <motion.li
+                  initial={hover2.initial}
+                  whileHover={hover2.whileHover}
+                  transition={hover.transition}
+                  className={Navlinks2}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    to="/about"
+                    className="block w-full rounded-xl px-4 py-4"
+                  >
+                    About
+                  </Link>
+                </motion.li>
+              </ul>
+            </div>
             <div className="w-screen flex p-5 justify-center">
               <div className="w-full flex justify-evenly items-center justify-center">
                 <FontAwesomeIcon
