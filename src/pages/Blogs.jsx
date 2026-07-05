@@ -4,9 +4,11 @@ import "../index.css";
 import ice from "../assets/trans.png";
 import choco from "../assets/choco.jpg";
 import pancake from "../assets/pancake.jpg";
+import sample1 from "../assets/sample1.jpg";
 import { motion } from "motion/react";
 import img7 from "../assets/img7.png";
 import BlogCard from "../components/BlogCard";
+import cmd2 from "../assets/cmd2.jpg";
 
 const container = {
   hidden: { opacity: 0, scale: 0.8, y: 20 },
@@ -45,14 +47,14 @@ function Blogs() {
                 <div>
                   <img
                     src={ice}
-                    className="max-w-[280px]  h-auto p-5 bg-gray-300 rounded"
+                    className="max-w-[280px] hidden lg:block  h-auto p-5 bg-gray-300 rounded"
                     alt=""
                   />
                 </div>
                 <div>
                   <img
                     src={ice}
-                    className="max-w-[350px]  h-auto p-5 bg-gray-300 rounded"
+                    className="lg:max-w-[350px] max-w-[300px]  h-auto p-5 bg-gray-300 rounded"
                     alt=""
                   />
                 </div>
@@ -60,13 +62,13 @@ function Blogs() {
                 <div>
                   <img
                     src={ice}
-                    className="max-w-[280px] h-auto p-5 bg-gray-300 rounded"
+                    className="max-w-[280px] hidden lg:block h-auto p-5 bg-gray-300 rounded"
                     alt=""
                   />
                 </div>
               </div>
               <h1
-                className="text-gray-600 -translate-y-7 text-center text-6xl"
+                className="text-gray-600 lg:p-0 p-2 lg:-translate-y-7 text-center text-2xl lg:text-6xl"
                 style={{ fontFamily: "MyCustomFont" }}
               >
                 Hot Creamy Banana<br></br> Chocolate Cake
@@ -74,14 +76,14 @@ function Blogs() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3, type: "spring" }}
-                className="-translate-y-5 bg-[var(--color-orange)] py-4 px-10 rounded-full shadow-lg text-white font-medium text-md"
+                className=" py-3 px-9 lg:-translate-y-5 bg-[var(--color-orange)] lg:py-4 lg:px-10 rounded-full shadow-lg text-white font-medium text-md"
               >
                 Contact Us
               </motion.button>
             </div>
           </div>
         </section>
-        <section className="p-5 w-full relative">
+        <section className="lg:p-5 w-full relative">
           <div className="absolute">
             <div className="relative">
               <motion.h5
@@ -152,12 +154,12 @@ function Blogs() {
               </motion.h5>
             </div>
           </div>
-          <div className="flex p-10  border-t border-b border-[var(--color-dark-gray)]/20 w-full justify-between">
-            <h2 className="text-xl max-w-[300px] font-medium leading-1.2">
+          <div className="lg:flex lg:flex-row flex-col py-5 lg:p-10  border-t border-b border-[var(--color-dark-gray)]/20 w-full justify-between">
+            <h2 className="text-xl text-center lg:text-start max-w-[300px] font-medium leading-1.2">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
               incidunt deleniti
             </h2>
-            <p className=" max-w-[500px] text-base leading-1.4">
+            <p className=" max-w-[500px] mt-8 lg:mt-0 text-base leading-1.4">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Temporibus, atque beatae. Non magni aliquid esse cupiditate sed
               neque facilis.
@@ -168,34 +170,107 @@ function Blogs() {
             </p>
           </div>
         </section>
-        <section className="bg-[var(--color-cream)] flex flex-col items-center mt-10 rounded-4xl  p-5 w-full relative">
-          <h1 className="text-2xl text-center py-4 text-black/80  px-30 bg-white rounded-full font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing.
+        <section className="bg-[var(--color-cream)] max-w-[1200px] flex flex-col items-center mt-10 rounded-4xl py-5  lg:p-5 w-full relative">
+          <h1 className="text-xl lg:text-2xl text-center py-2 text-wrap lg:py-4 text-black/80 px-5 lg:px-30 bg-white rounded-full font-medium mb-10">
+            Lorem ipsum dolor.
           </h1>
-          <div className="bg-white p-10 rounded-2xl mt-5 max-w-[800px]">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <p key={index} className="text-base text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-                pariatur beatae porro expedita nam sunt doloremque obcaecati
-                reiciendis eligendi commodi dolorem ab iste voluptates ut ea
-                dicta, aut soluta totam harum autem accusantium quasi ducimus?
-                Quidem consequuntur inventore quam nihil ipsum temporibus velit
-                voluptatibus, adipisci odio! Numquam nulla dicta sit?
-                <br></br>
-              </p>
+          <div className="flex flex-col items-center justify-center gap-2 ">
+            <div className="flex lg:flex-row flex-col-reverse justify-center gap-5 p-5">
+              <span className="relative">
+                <h5 className="text-lg font-semibold">
+                  Lorem ipsum dolor sit amet.
+                </h5>
+                <p className="leading-relaxed mb-2 lg:mb-0 font-light max-w-[500px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laborum ut repellendus libero nam praesentium rem eveniet
+                  ducimus! Laboriosam, quo possimus. Lorem ipsum dolor sit, amet
+                  <span className="hidden lg:block ">
+                    consectetur adipisicing elit. Ullam quaerat deserunt cumque
+                    obcaecati reprehenderit exercitationem ea perspiciatis porro
+                    iure ipsam voluptate totam quis vero dignissimos officiis
+                    ad, asperiores alias cupiditate saepe voluptas nulla animi
+                    quae placeat excepturi. Molestiae beatae ullam repellat esse
+                    perspiciatis veniam corporis numquam illo, distinctio iste
+                    provident?
+                  </span>
+                </p>
+                <motion.a
+                  transition={{ duration: 0.3, type: "ease" }}
+                  whileHover={{}}
+                  href=""
+                  className="lg:absolute rounded-full lg:bottom-5 lg:left-5 text-[var(--color-dark-gray)]"
+                >
+                  View More
+                </motion.a>
+              </span>
+              <img
+                src={choco}
+                alt="Blog Image"
+                className="lg:w-[30%] h-auto rounded lg:rounded-4xl"
+              />
+            </div>
+            <div className="flex gap-5 lg:flex-row flex-col p-5">
+              <img
+                src={sample1}
+                alt="Blog Image"
+                className="lg:w-[30%] h-auto rounded lg:rounded-4xl"
+              />
 
-            ))}
+              <span className="relative">
+                <h5 className="text-lg font-semibold">
+                  Lorem ipsum dolor sit amet.
+                </h5>
+                <p className="leading-relaxed  max-w-[500px] lg:mb-0 mb-2  font-extralight">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laborum ut repellendus libero nam praesentium rem eveniet
+                  ducimus! Laboriosam, quo possimus. Lorem ipsum dolor sit, amet
+                                    <span className="hidden lg:block ">
+                    consectetur adipisicing elit. Ullam quaerat deserunt cumque
+                    obcaecati reprehenderit exercitationem ea perspiciatis porro
+                    iure ipsam voluptate totam quis vero dignissimos officiis
+                    ad, asperiores alias cupiditate saepe voluptas nulla animi
+                    quae placeat excepturi. Molestiae beatae ullam repellat esse
+                    perspiciatis veniam corporis numquam illo, distinctio iste
+                    provident?
+                  </span>
+                </p>
+                <motion.a
+                  transition={{ duration: 0.3, type: "ease" }}
+                  whileHover={{}}
+                  href=""
+        className="lg:absolute rounded-full lg:bottom-5 lg:left-5 text-[var(--color-dark-gray)]"
+                >
+                  View More
+                </motion.a>
+              </span>
+            </div>
+
+            <div></div>
           </div>
+        </section>
+        <section className="max-w-[1200px]">
           <motion.div
             variants={container}
             viewport={{ once: true, amount: 0.3 }}
             initial="hidden"
             whileInView="show"
-            className="flex my-5 p-10 gap-5"
+            className="grid grid-cols-1 md:grid-cols-3 my-15 gap-5"
           >
-            <BlogCard item={item} />
-            <BlogCard item={item} />
-            <BlogCard item={item} />
+            <BlogCard
+              image={cmd2}
+              title="Lorem ipsum dolor sit amet."
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ut repellendus libero nam praesentium rem eveniet ducimus!"
+            />
+            <BlogCard
+              image={cmd2}
+              title="Lorem ipsum dolor sit amet."
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ut repellendus libero nam praesentium rem eveniet ducimus!"
+            />
+            <BlogCard
+              image={cmd2}
+              title="Lorem ipsum dolor sit amet."
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ut repellendus libero nam praesentium rem eveniet ducimus!"
+            />
           </motion.div>
         </section>
       </div>

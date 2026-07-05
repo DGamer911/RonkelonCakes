@@ -27,27 +27,27 @@ function Hero() {
           style={{ fontFamily: "MyCustomFont" }}
           
         >
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate: 20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>B</motion.span>
-          <motion.span className="inline-block"  onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>a</motion.span>
-          <motion.span className="inline-block"  onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>k</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>e</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>H</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>o</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>u</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>s</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>e</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate: 20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>B</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block"  onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>a</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block"  onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>k</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>e</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>H</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>o</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>u</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>s</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>e</motion.span>
                     <span> </span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>b</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>y</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>b</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>y</motion.span>
           <span><br></br></span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>R</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>o</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type:"spring", stiffness : 240}}>n</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color : changeColor()}} transition={{duration : 0.3 ,type:"spring" ,stiffness :240}} >k</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color : changeColor()}} transition={{duration : 0.3 ,type:"spring" ,stiffness :240}} >e</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color : changeColor()}} transition={{duration : 0.3 ,type:"spring" ,stiffness :240}} >l</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>o</motion.span>
-          <motion.span className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>n</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>R</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>o</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type:"spring", stiffness : 240}}>n</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color : changeColor()}} transition={{duration : 0.3 ,type:"spring" ,stiffness :240}} >k</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color : changeColor()}} transition={{duration : 0.3 ,type:"spring" ,stiffness :240}} >e</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color : changeColor()}} transition={{duration : 0.3 ,type:"spring" ,stiffness :240}} >l</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>o</motion.span>
+          <motion.span style={{ fontFamily: "MyCustomFont" }} className="inline-block" onMouseOver={()=>changeColor()} whileHover={{rotate:20, color: changeColor() }} transition={{duration: 0.3, type: "spring", stiffness: 240}}>n</motion.span>
         </motion.h1>
         <motion.p
           initial={{ y: 50, opacity: 0 }}

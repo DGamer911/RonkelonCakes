@@ -7,6 +7,7 @@ import "./index.css";
 import Blogs from "./pages/Blogs";
 import About from "./pages/About";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about" element={<About />} />
 
       </Routes>
+      <Footer />
     </Router>
   );
 }
