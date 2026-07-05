@@ -1,280 +1,242 @@
 import React from "react";
-import NavBar from "../components/NavBar";
 import "../index.css";
 import ice from "../assets/trans.png";
 import choco from "../assets/choco.jpg";
-import pancake from "../assets/pancake.jpg";
 import sample1 from "../assets/sample1.jpg";
 import { motion } from "motion/react";
-import img7 from "../assets/img7.png";
 import BlogCard from "../components/BlogCard";
 import cmd2 from "../assets/cmd2.jpg";
 
 const container = {
-  hidden: { opacity: 0, scale: 0.8, y: 20 },
+  hidden: { opacity: 0, scale: 0.95, y: 20 },
   show: {
     opacity: 1,
     scale: 1,
     y: 0,
     transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2,
+      staggerChildren: 0.15,
+      delayChildren: 0.15,
       type: "spring",
-      duration: 0.3,
+      duration: 0.35,
     },
   },
 };
 
-const item = {
-  hidden: { opacity: 0, scale: 0.8, y: 20 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: { type: "spring", duration: 0.3 },
+const highlights = [
+  {
+    title: "Crafted for celebration",
+    description:
+      "Every story on our blog is inspired by the same care we put into our cakes, pastries, and event trays.",
+    image: choco,
+    tag: "Behind the scenes",
   },
-};
+  {
+    title: "Sweet moments, beautifully shared",
+    description:
+      "From intimate birthdays to grand weddings, we love turning dessert into an experience guests remember.",
+    image: sample1,
+    tag: "Inspiration",
+  },
+];
+
+const featuredPosts = [
+  {
+    title: "How we style celebration cakes for unforgettable first impressions",
+    description:
+      "Discover the layers of texture, color, and detail that make every custom cake feel personal.",
+    image: cmd2,
+    tag: "Cake styling",
+  },
+  {
+    title: "The little details that make a dessert table feel luxurious",
+    description:
+      "Learn how florals, textures, and thoughtful spacing can elevate any gathering.",
+    image: cmd2,
+    tag: "Events",
+  },
+  {
+    title: "A fresh look at pastry favorites for brunch and gifting",
+    description:
+      "Our pastry selection comes together with buttery layers, rich fillings, and elegant presentation.",
+    image: cmd2,
+    tag: "Pastries",
+  },
+];
 
 function Blogs() {
   return (
-    <>
-      {/* <NavBar /> */}
-      <div className="w-full p-5 flex flex-col relative items-center bg-[#FAFAFA] overflow-x-hidden m-0">
-        <section className="w-screen p-5 h-screen">
-          <div className="w-full flex items-center flex-col">
-            <div className="flex flex-col items-center">
-              <div className="flex gap-2 items-end">
-                <div>
-                  <img
-                    src={ice}
-                    className="max-w-[280px] hidden lg:block  h-auto p-5 bg-gray-300 rounded"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    src={ice}
-                    className="lg:max-w-[350px] max-w-[300px]  h-auto p-5 bg-gray-300 rounded"
-                    alt=""
-                  />
-                </div>
+    <div className="w-full bg-[var(--color-surface)] px-4 py-6 sm:px-6 lg:px-8">
+      <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center rounded-[2rem] border border-[var(--color-ash)]/70 bg-[linear-gradient(135deg,_rgba(255,231,208,0.7)_0%,_rgba(255,255,255,0.96)_100%)] px-5 py-10 shadow-[0_30px_80px_rgba(0,0,0,0.06)] sm:px-8 lg:min-h-[85vh] lg:px-12 lg:py-14">
+        <div className="grid w-full items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, type: "spring" }}
+            className="space-y-6 text-center lg:text-left"
+          >
+            <span className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-medium uppercase tracking-[0.3em] text-[var(--color-orange)] shadow-sm">
+              Fresh from the bakery
+            </span>
+            <h1
+              className="text-4xl leading-tight text-[var(--color-dark-gray)] sm:text-5xl lg:text-6xl"
+              style={{ fontFamily: "MyCustomFont" }}
+            >
+              Hot Creamy Banana Chocolate Cake
+            </h1>
+            <p className="mx-auto max-w-xl text-base leading-7 text-[var(--color-dark-gray)]/80 lg:mx-0">
+              A closer look at our newest creations, seasonal inspiration, and the sweet details that bring every celebration to life.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
+              <motion.a
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.98 }}
+                href="/contact"
+                className="rounded-full bg-[var(--color-orange)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-orange)]/20"
+              >
+                Contact us
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.98 }}
+                href="/catalogue"
+                className="rounded-full border border-[var(--color-dark-gray)] px-6 py-3 text-sm font-semibold text-[var(--color-dark-gray)]"
+              >
+                Browse our treats
+              </motion.a>
+            </div>
+          </motion.div>
 
-                <div>
-                  <img
-                    src={ice}
-                    className="max-w-[280px] hidden lg:block h-auto p-5 bg-gray-300 rounded"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <h1
-                className="text-gray-600 lg:p-0 p-2 lg:-translate-y-7 text-center text-2xl lg:text-6xl"
-                style={{ fontFamily: "MyCustomFont" }}
-              >
-                Hot Creamy Banana<br></br> Chocolate Cake
-              </h1>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3, type: "spring" }}
-                className=" py-3 px-9 lg:-translate-y-5 bg-[var(--color-orange)] lg:py-4 lg:px-10 rounded-full shadow-lg text-white font-medium text-md"
-              >
-                Contact Us
-              </motion.button>
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            className="relative mx-auto flex w-full max-w-[30rem] items-center justify-center"
+          >
+            <div className="absolute left-4 top-8 h-32 w-28 rounded-[1.5rem] border border-white/70 bg-white/70 shadow-lg backdrop-blur sm:left-8 sm:h-36 sm:w-32" />
+            <img
+              src={ice}
+              alt="Decorative cake showcase"
+              className="w-full rounded-[2rem] border border-white/60 object-cover shadow-[0_25px_65px_rgba(0,0,0,0.18)]"
+            />
+            <div className="absolute bottom-5 right-4 rounded-[1.25rem] bg-[var(--color-dark-gray)] px-4 py-3 text-sm text-white shadow-lg sm:right-8">
+              <p className="font-semibold">New this week</p>
+              <p className="text-xs text-white/80">Banana chocolate layers</p>
             </div>
-          </div>
-        </section>
-        <section className="lg:p-5 w-full relative">
-          <div className="absolute">
-            <div className="relative">
-              <motion.h5
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0 0px 16px rgba(0,0,0,0.2)",
-                }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.3, type: "spring" }}
-                className="text-sm py-2 select-none cursor-pointer px-4 absolute top-0 -translate-y-6 left-30 text-white text-center rounded  bg-blue-500"
-              >
-                Sweet
-              </motion.h5>
-              <motion.h5
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0 0px 16px rgba(0,0,0,0.2)",
-                }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.3, type: "spring" }}
-                className="text-sm py-2 px-4 cursor-pointer select-none text-white absolute top-10 left-[400px] text-center rounded bg-red-500"
-              >
-                Sugary
-              </motion.h5>
-              <motion.h5
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0 0px 16px rgba(0,0,0,0.2)",
-                }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.3, type: "spring" }}
-                className="text-sm py-2 px-4 cursor-pointer select-none text-white text-center absolute top-25 left-70 rounded bg-teal-500"
-              >
-                Delicious!
-              </motion.h5>
-              <motion.h5
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0 0px 16px rgba(0,0,0,0.2)",
-                }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.3, type: "spring" }}
-                className="text-sm py-2 px-4 cursor-pointer select-none text-white text-center absolute top-40 left-[600px] rounded bg-gray-500"
-              >
-                Honeyed
-              </motion.h5>
-              <motion.h5
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0 0px 16px rgba(0,0,0,0.2)",
-                }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.3, type: "spring" }}
-                className="text-sm py-2 px-4 cursor-pointer select-none text-white text-center absolute top-6 left-[640px] rounded bg-orange-500"
-              >
-                Tasty
-              </motion.h5>
-              <motion.h5
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0 8px 16px rgba(77,77,77,.3)",
-                }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.3, type: "spring" }}
-                className="text-sm py-2 px-4 cursor-pointer select-none text-white text-center rounded translate-y-6 absolute top-32 left-[1188px] bg-green-500"
-              >
-                Rich
-              </motion.h5>
-            </div>
-          </div>
-          <div className="lg:flex lg:flex-row flex-col py-5 lg:p-10  border-t border-b border-[var(--color-dark-gray)]/20 w-full justify-between">
-            <h2 className="text-xl text-center lg:text-start max-w-[300px] font-medium leading-1.2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-              incidunt deleniti
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-8 w-full max-w-7xl rounded-[2rem] border border-[var(--color-ash)]/70 bg-white/80 px-5 py-6 shadow-[0_20px_50px_rgba(0,0,0,0.04)] backdrop-blur sm:px-8 lg:px-10">
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          {[
+            "Sweet",
+            "Sugary",
+            "Delicious",
+            "Honeyed",
+            "Tasty",
+            "Rich",
+          ].map((tag) => (
+            <motion.span
+              key={tag}
+              whileHover={{ y: -3, scale: 1.03 }}
+              className="rounded-full px-4 py-2 text-sm font-medium text-white shadow-md"
+              style={{
+                backgroundColor:
+                  tag === "Sweet"
+                    ? "#3b82f6"
+                    : tag === "Sugary"
+                      ? "#ef4444"
+                      : tag === "Delicious"
+                        ? "#14b8a6"
+                        : tag === "Honeyed"
+                          ? "#64748b"
+                          : tag === "Tasty"
+                            ? "#f97316"
+                            : "#22c55e",
+              }}
+            >
+              {tag}
+            </motion.span>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <h2 className="text-2xl font-semibold text-[var(--color-dark-gray)] sm:text-3xl">
+              A warm, modern view of sweet indulgence
             </h2>
-            <p className=" max-w-[500px] mt-8 lg:mt-0 text-base leading-1.4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus, atque beatae. Non magni aliquid esse cupiditate sed
-              neque facilis.
-              <br></br>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus, atque beatae. Non magni aliquid esse cupiditate sed
-              neque facilis. Debitis.
+            <p className="mt-3 text-base leading-7 text-[var(--color-dark-gray)]/75">
+              We blend classic baking with contemporary styling, bringing a little theatre to every slice and every table setting.
             </p>
           </div>
-        </section>
-        <section className="bg-[var(--color-cream)] max-w-[1200px] flex flex-col items-center mt-10 rounded-4xl py-5  lg:p-5 w-full relative">
-          <h1 className="text-xl lg:text-2xl text-center py-2 text-wrap lg:py-4 text-black/80 px-5 lg:px-30 bg-white rounded-full font-medium mb-10">
-            Lorem ipsum dolor.
-          </h1>
-          <div className="flex flex-col items-center justify-center gap-2 ">
-            <div className="flex lg:flex-row flex-col-reverse justify-center gap-5 p-5">
-              <span className="relative">
-                <h5 className="text-lg font-semibold">
-                  Lorem ipsum dolor sit amet.
-                </h5>
-                <p className="leading-relaxed mb-2 lg:mb-0 font-light max-w-[500px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laborum ut repellendus libero nam praesentium rem eveniet
-                  ducimus! Laboriosam, quo possimus. Lorem ipsum dolor sit, amet
-                  <span className="hidden lg:block ">
-                    consectetur adipisicing elit. Ullam quaerat deserunt cumque
-                    obcaecati reprehenderit exercitationem ea perspiciatis porro
-                    iure ipsam voluptate totam quis vero dignissimos officiis
-                    ad, asperiores alias cupiditate saepe voluptas nulla animi
-                    quae placeat excepturi. Molestiae beatae ullam repellat esse
-                    perspiciatis veniam corporis numquam illo, distinctio iste
-                    provident?
-                  </span>
-                </p>
-                <motion.a
-                  transition={{ duration: 0.3, type: "ease" }}
-                  whileHover={{}}
-                  href=""
-                  className="lg:absolute rounded-full lg:bottom-5 lg:left-5 text-[var(--color-dark-gray)]"
-                >
-                  View More
-                </motion.a>
-              </span>
-              <img
-                src={choco}
-                alt="Blog Image"
-                className="lg:w-[30%] h-auto rounded lg:rounded-4xl"
-              />
-            </div>
-            <div className="flex gap-5 lg:flex-row flex-col p-5">
-              <img
-                src={sample1}
-                alt="Blog Image"
-                className="lg:w-[30%] h-auto rounded lg:rounded-4xl"
-              />
-
-              <span className="relative">
-                <h5 className="text-lg font-semibold">
-                  Lorem ipsum dolor sit amet.
-                </h5>
-                <p className="leading-relaxed  max-w-[500px] lg:mb-0 mb-2  font-extralight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laborum ut repellendus libero nam praesentium rem eveniet
-                  ducimus! Laboriosam, quo possimus. Lorem ipsum dolor sit, amet
-                                    <span className="hidden lg:block ">
-                    consectetur adipisicing elit. Ullam quaerat deserunt cumque
-                    obcaecati reprehenderit exercitationem ea perspiciatis porro
-                    iure ipsam voluptate totam quis vero dignissimos officiis
-                    ad, asperiores alias cupiditate saepe voluptas nulla animi
-                    quae placeat excepturi. Molestiae beatae ullam repellat esse
-                    perspiciatis veniam corporis numquam illo, distinctio iste
-                    provident?
-                  </span>
-                </p>
-                <motion.a
-                  transition={{ duration: 0.3, type: "ease" }}
-                  whileHover={{}}
-                  href=""
-        className="lg:absolute rounded-full lg:bottom-5 lg:left-5 text-[var(--color-dark-gray)]"
-                >
-                  View More
-                </motion.a>
-              </span>
-            </div>
-
-            <div></div>
+          <div className="rounded-[1.5rem] bg-[var(--color-cream)] px-5 py-4 text-sm text-[var(--color-dark-gray)] shadow-sm">
+            <p className="font-semibold">Signature style</p>
+            <p className="mt-1 text-[var(--color-dark-gray)]/80">Elegant finishes, rich flavors, and beautiful presentation.</p>
           </div>
-        </section>
-        <section className="max-w-[1200px]">
-          <motion.div
-            variants={container}
-            viewport={{ once: true, amount: 0.3 }}
-            initial="hidden"
-            whileInView="show"
-            className="grid grid-cols-1 md:grid-cols-3 my-15 gap-5"
+        </div>
+      </section>
+
+      <section className="mx-auto mt-8 w-full max-w-7xl space-y-6 px-1 sm:px-0">
+        {highlights.map((item, index) => (
+          <motion.article
+            key={item.title}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.35, delay: index * 0.08 }}
+            className={`flex flex-col gap-5 rounded-[2rem] border border-[var(--color-ash)]/70 bg-white p-4 shadow-[0_16px_50px_rgba(0,0,0,0.04)] lg:flex-row lg:items-center lg:p-6 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
           >
-            <BlogCard
-              image={cmd2}
-              title="Lorem ipsum dolor sit amet."
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ut repellendus libero nam praesentium rem eveniet ducimus!"
+            <img
+              src={item.image}
+              alt={item.title}
+              className="h-64 w-full rounded-[1.5rem] object-cover lg:w-[42%]"
             />
+            <div className="flex-1 space-y-3 px-2 py-1 lg:px-3">
+              <span className="inline-flex rounded-full bg-[var(--color-cream)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--color-orange)]">
+                {item.tag}
+              </span>
+              <h3 className="text-2xl font-semibold text-[var(--color-dark-gray)]">
+                {item.title}
+              </h3>
+              <p className="max-w-2xl text-base leading-7 text-[var(--color-dark-gray)]/75">
+                {item.description}
+              </p>
+              <a href="/contact" className="inline-flex text-sm font-semibold text-[var(--color-orange)]">
+                Get in touch →
+              </a>
+            </div>
+          </motion.article>
+        ))}
+      </section>
+
+      <section className="mx-auto mt-10 w-full max-w-7xl px-1 sm:px-0">
+        <div className="mb-6 flex flex-col gap-2 text-center lg:text-left">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-orange)]">
+            Latest stories
+          </p>
+          <h2 className="text-3xl font-semibold text-[var(--color-dark-gray)]">
+            Read more from the kitchen
+          </h2>
+        </div>
+        <motion.div
+          variants={container}
+          viewport={{ once: true, amount: 0.2 }}
+          initial="hidden"
+          whileInView="show"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
+        >
+          {featuredPosts.map((post) => (
             <BlogCard
-              image={cmd2}
-              title="Lorem ipsum dolor sit amet."
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ut repellendus libero nam praesentium rem eveniet ducimus!"
+              key={post.title}
+              image={post.image}
+              title={post.title}
+              description={post.description}
+              tag={post.tag}
             />
-            <BlogCard
-              image={cmd2}
-              title="Lorem ipsum dolor sit amet."
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ut repellendus libero nam praesentium rem eveniet ducimus!"
-            />
-          </motion.div>
-        </section>
-      </div>
-    </>
+          ))}
+        </motion.div>
+      </section>
+    </div>
   );
 }
 

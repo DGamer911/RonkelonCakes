@@ -197,25 +197,25 @@ function NavBar() {
               <div className="w-full flex justify-evenly items-center justify-center">
                 <FontAwesomeIcon
                   size="2x"
-                  style={{ color: "#1877f2" }}
+                  style={{ color: "var(--color-facebook)" }}
                   className={iconStyles}
                   icon={faFacebook}
                 />
                 <FontAwesomeIcon
                   size="2x"
-                  style={{ color: "#c13584" }}
+                  style={{ color: "var(--color-instagram)" }}
                   className={iconStyles}
                   icon={faInstagram}
                 />
                 <FontAwesomeIcon
                   size="2x"
-                  style={{ color: "#229ed9" }}
+                  style={{ color: "var(--color-telegram)" }}
                   className={iconStyles}
                   icon={faTelegram}
                 />
                 <FontAwesomeIcon
                   size="2x"
-                  style={{ color: "#25d366" }}
+                  style={{ color: "var(--color-whatsapp)" }}
                   className={iconStyles}
                   icon={faWhatsapp}
                 />

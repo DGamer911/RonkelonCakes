@@ -2,15 +2,16 @@ import React from "react";
 import TestimonialCard from "./TestimonialCard";
 import "../index.css";
 import Card2 from "./Card2";
+import {testimonials} from "../data/testimonials";
 
 function Section3() {
 
 
   
   return (
-    <div className="bg-[#fafafa)] relative p-5 flex-col flex justify-center items-center">
+    <div className="bg-[var(--color-surface)] relative p-5 flex-col flex justify-center items-center">
       <div className="mt-40 flex z-2 justify-center items-center flex-col">
-        <div className="p-4 my-2 text-center text-white rounded-full bg-[var(--color-dark-gray)]/90">
+        <div className="p-4 my-2 text-center text-white rounded-full bg-gray-800/90">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -26,13 +27,13 @@ function Section3() {
             />
           </svg>
         </div>
-        <p className="text-2xl my-5 max-w-[700px] text-center text-[var(--color-dark-gray)] font-base">
+        <p className="lg:text-2xl text-xl my-5 max-w-175 text-center text-[var(--color-dark-gray)] font-base">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
           architecto repellendus accusantium consequuntur id ullam beatae odit
           perspiciatis illo iste.
         </p>
-        <div className="flex w-full justify-center gap-2">
-          <button className="bg-[var(--color-orange)]/90 mt-5 cursor-pointer text-white py-3 lg:px-10 px-2 rounded-full flex items-center gap-2">
+        <div className="flex lg:flex-row flex-col w-full max-w-[500px] flex-wrap justify-center gap-2">
+          <button className="bg-orange-500/90 mt-5 cursor-pointer text-white py-3 lg:px-10 px-2 flex-1 rounded-full text-center justify-center flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -49,7 +50,7 @@ function Section3() {
             </svg>
             <span>Learn More</span>
           </button>
-          <button className="bg-transparent cursor-pointer border border-2 border-[var(--color-orange)]/90 mt-5 text-[var(--color-orange)] py-3 lg:px-10 px-2  rounded-full flex items-center gap-2">
+          <button className="bg-transparent cursor-pointer border-2 border-orange-500/90 lg:mt-5 flex-1 text-orange-500 py-3 lg:px-10 px-2 rounded-full flex items-center justify-center gap-2">
             <span>View Our Menu</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -76,9 +77,9 @@ function Section3() {
       </div>
       <div className="lg:mt-40 mt-20 flex justify-center">
         <div className="flex flex-col w-full items-center">
-          <h2 className="bg-[var(--color-dark-gray)]/90 text-white shadow-2xl text-center text-nowrap flex gap-2 lg:mt-0 mt-5  p-4 rounded-full max-w-[200px] text-center">
-            Featured Products!
-          </h2>
+            <h2 className="bg-[var(--color-dark-gray)]/90 text-white shadow-2xl text-center text-nowrap flex gap-2 lg:mt-0 mt-5 p-4 rounded-full max-w-50">
+              Featured Products!
+            </h2>
           <div className="flex gap-4 lg:flex-nowrap flex-wrap justify-center p-5 ">
             <Card2 whileInView={{ once: true, rotate: -22, x: 100 }} initial={{ x: 330 }} />
             <Card2 whileInView={{ once: true, rotate: 0 }} initial={{ x: 0 }} />
@@ -87,8 +88,8 @@ function Section3() {
         </div>
       </div>
       <div>
-        <div className="flex lg:my-40  flex-col justify-center items-center">
-          <h2 className="bg-[var(--color-dark-gray)]/90 text-white shadow-2xl text-nowrap flex gap-2 lg:mt-0 mt-5  p-4 rounded-full max-w-[200px] text-center">
+        <div className="flex lg:my-20 flex-col justify-center items-center">
+          <h2 className="bg-[#323232]/90 text-white shadow-2xl text-nowrap flex gap-2 lg:mt-0 mt-5 p-4 rounded-full max-w-50 text-center">
             Testimonials
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -105,10 +106,17 @@ function Section3() {
               />
             </svg>
           </h2>
-          <div className="flex gap-4 overflow-x-scrol lg:overflow-hidden border-t border-b border-[var(--color-dark-gray)]/20 flex-nowrap z-2  justify-center p-10 my-10">
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
+          <div className="flex gap-4 scroll-smooth overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] border-t border-b border-gray-300 flex-nowrap z-2 justify-start w-screen p-10 mt-10">
+          {
+            testimonials.map((testimonial, index, name, profile) => (
+              <TestimonialCard
+                key={testimonial.index}
+                name={testimonial.name}
+                testimonial={testimonial.testimonial}
+                profile={testimonial.profile}
+              />
+            ))
+          }
           </div>
         </div>
       </div>

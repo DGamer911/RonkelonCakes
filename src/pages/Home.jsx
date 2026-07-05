@@ -10,10 +10,12 @@ function Home() {
   return (
 <>
 
-    <div className="w-full overflow-x-hidden m-0">
+    <div className="w-full bg-[var(--color-surface)] overflow-x-hidden m-0">
       <Hero />
       <Section2/>
       <Section3/>
+      <Section4 />
+
     </div>
 </>
   );
